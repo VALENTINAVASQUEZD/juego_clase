@@ -40,6 +40,11 @@ export const sources = [
         "path": "/models/toycar/building_a.001_lev1.glb"
     },
     {
+        "name": "building_a.002.001_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/building_a.002.001_lev1.glb"
+    },
+    {
         "name": "building_a.002_lev1",
         "type": "gltfModel",
         "path": "/models/toycar/building_a.002_lev1.glb"
@@ -73,6 +78,21 @@ export const sources = [
         "name": "coin_structure_diagonal_lev1",
         "type": "gltfModel",
         "path": "/models/toycar/coin_structure_diagonal_lev1.glb"
+    },
+    {
+        "name": "cylinder.001.001_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/cylinder.001.001_lev1.glb"
+    },
+    {
+        "name": "cylinder.001.002_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/cylinder.001.002_lev1.glb"
+    },
+    {
+        "name": "cylinder.001.003_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/cylinder.001.003_lev1.glb"
     },
     {
         "name": "cylinder.001_lev1",
@@ -200,6 +220,11 @@ export const sources = [
         "path": "/models/toycar/low_poly_cuboid_rock_006_lev1.glb"
     },
     {
+        "name": "low_poly_cuboid_rock_012.001_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/low_poly_cuboid_rock_012.001_lev1.glb"
+    },
+    {
         "name": "low_poly_cuboid_rock_012_lev1",
         "type": "gltfModel",
         "path": "/models/toycar/low_poly_cuboid_rock_012_lev1.glb"
@@ -310,6 +335,11 @@ export const sources = [
         "path": "/models/toycar/plane_lev1.glb"
     },
     {
+        "name": "rocket_basea.001_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/rocket_basea.001_lev1.glb"
+    },
+    {
         "name": "rocket_basea_lev1",
         "type": "gltfModel",
         "path": "/models/toycar/rocket_basea_lev1.glb"
@@ -355,9 +385,19 @@ export const sources = [
         "path": "/models/toycar/rock_19_lev1.glb"
     },
     {
+        "name": "silo.001_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/silo.001_lev1.glb"
+    },
+    {
         "name": "silo_lev1",
         "type": "gltfModel",
         "path": "/models/toycar/silo_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.001_lev1.001",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.001_lev1.001.glb"
     },
     {
         "name": "simple_tree_5.001_lev1",
@@ -365,9 +405,64 @@ export const sources = [
         "path": "/models/toycar/simple_tree_5.001_lev1.glb"
     },
     {
+        "name": "simple_tree_5.002_lev1.001",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.002_lev1.001.glb"
+    },
+    {
         "name": "simple_tree_5.002_lev1",
         "type": "gltfModel",
         "path": "/models/toycar/simple_tree_5.002_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.003_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.003_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.004_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.004_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.005_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.005_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.006_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.006_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.007_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.007_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.008_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.008_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.009_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.009_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.010_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.010_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.011_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.011_lev1.glb"
+    },
+    {
+        "name": "simple_tree_5.012_lev1",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.012_lev1.glb"
     },
     {
         "name": "simple_tree_5_lev1",
