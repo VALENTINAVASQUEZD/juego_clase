@@ -1,5 +1,10 @@
 export const sources = [
     {
+        "name": "(%ignore)_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/(%ignore)_lev2.glb"
+    },
+    {
         "name": "baked_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/baked_lev2.glb"
@@ -50,6 +55,36 @@ export const sources = [
         "path": "/models/toycar/building-tower_lev2.glb"
     },
     {
+        "name": "cart-high.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/cart-high.001_lev2.glb"
+    },
+    {
+        "name": "cart-high.002_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/cart-high.002_lev2.glb"
+    },
+    {
+        "name": "cart-high.003_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/cart-high.003_lev2.glb"
+    },
+    {
+        "name": "cart-high.004_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/cart-high.004_lev2.glb"
+    },
+    {
+        "name": "cart-high.005_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/cart-high.005_lev2.glb"
+    },
+    {
+        "name": "cart-high_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/cart-high_lev2.glb"
+    },
+    {
         "name": "chimney_detailed_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/chimney_detailed_lev2.glb"
@@ -68,11 +103,6 @@ export const sources = [
         "name": "coin_structure_detailed_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/coin_structure_detailed_lev2.glb"
-    },
-    {
-        "name": "coin_structure_diagonal_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/coin_structure_diagonal_lev2.glb"
     },
     {
         "name": "cube.001_lev2",
@@ -98,6 +128,21 @@ export const sources = [
         "name": "cylinder.002_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/cylinder.002_lev2.glb"
+    },
+    {
+        "name": "fountain-round-detail_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/fountain-round-detail_lev2.glb"
+    },
+    {
+        "name": "group.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/group.001_lev2.glb"
+    },
+    {
+        "name": "group_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/group_lev2.glb"
     },
     {
         "name": "hangar_roundb.002_lev2",
@@ -135,14 +180,184 @@ export const sources = [
         "path": "/models/toycar/plane_lev2.glb"
     },
     {
+        "name": "rock-large.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large.001_lev2.glb"
+    },
+    {
+        "name": "rock-large.002_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large.002_lev2.glb"
+    },
+    {
+        "name": "rock-large.003_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large.003_lev2.glb"
+    },
+    {
+        "name": "rock-large.004_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large.004_lev2.glb"
+    },
+    {
+        "name": "rock-large.005_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large.005_lev2.glb"
+    },
+    {
+        "name": "rock-large.006_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large.006_lev2.glb"
+    },
+    {
+        "name": "rock-large.007_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large.007_lev2.glb"
+    },
+    {
+        "name": "rock-large_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-large_lev2.glb"
+    },
+    {
+        "name": "rock-small.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.001_lev2.glb"
+    },
+    {
+        "name": "rock-small.002_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.002_lev2.glb"
+    },
+    {
+        "name": "rock-small.003_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.003_lev2.glb"
+    },
+    {
+        "name": "rock-small.004_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.004_lev2.glb"
+    },
+    {
+        "name": "rock-small.005_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.005_lev2.glb"
+    },
+    {
+        "name": "rock-small.006_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.006_lev2.glb"
+    },
+    {
+        "name": "rock-small.007_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.007_lev2.glb"
+    },
+    {
+        "name": "rock-small.008_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.008_lev2.glb"
+    },
+    {
+        "name": "rock-small.009_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.009_lev2.glb"
+    },
+    {
+        "name": "rock-small.010_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.010_lev2.glb"
+    },
+    {
+        "name": "rock-small.011_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.011_lev2.glb"
+    },
+    {
+        "name": "rock-small.012_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.012_lev2.glb"
+    },
+    {
+        "name": "rock-small.013_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.013_lev2.glb"
+    },
+    {
+        "name": "rock-small.014_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.014_lev2.glb"
+    },
+    {
+        "name": "rock-small.015_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.015_lev2.glb"
+    },
+    {
+        "name": "rock-small.016_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.016_lev2.glb"
+    },
+    {
+        "name": "rock-small.017_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.017_lev2.glb"
+    },
+    {
+        "name": "rock-small.018_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small.018_lev2.glb"
+    },
+    {
+        "name": "rock-small_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-small_lev2.glb"
+    },
+    {
+        "name": "rock-wide.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide.001_lev2.glb"
+    },
+    {
+        "name": "rock-wide.002_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide.002_lev2.glb"
+    },
+    {
+        "name": "rock-wide.003_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide.003_lev2.glb"
+    },
+    {
+        "name": "rock-wide.004_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide.004_lev2.glb"
+    },
+    {
+        "name": "rock-wide.005_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide.005_lev2.glb"
+    },
+    {
+        "name": "rock-wide.006_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide.006_lev2.glb"
+    },
+    {
+        "name": "rock-wide.007_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide.007_lev2.glb"
+    },
+    {
+        "name": "rock-wide_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/rock-wide_lev2.glb"
+    },
+    {
         "name": "rocket_basea_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/rocket_basea_lev2.glb"
-    },
-    {
-        "name": "rocket_baseb_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/rocket_baseb_lev2.glb"
     },
     {
         "name": "rocket_sidesb_lev2",
@@ -180,9 +395,9 @@ export const sources = [
         "path": "/models/toycar/silo_lev2.glb"
     },
     {
-        "name": "simple_tree_5.001_lev2.001",
+        "name": "simple_tree_5.001.001_lev2",
         "type": "gltfModel",
-        "path": "/models/toycar/simple_tree_5.001_lev2.001.glb"
+        "path": "/models/toycar/simple_tree_5.001.001_lev2.glb"
     },
     {
         "name": "simple_tree_5.001_lev2",
@@ -230,9 +445,9 @@ export const sources = [
         "path": "/models/toycar/simple_tree_5.002.008_lev2.glb"
     },
     {
-        "name": "simple_tree_5.002_lev2.009",
+        "name": "simple_tree_5.002.009_lev2",
         "type": "gltfModel",
-        "path": "/models/toycar/simple_tree_5.002_lev2.009.glb"
+        "path": "/models/toycar/simple_tree_5.002.009_lev2.glb"
     },
     {
         "name": "simple_tree_5.002_lev2",
@@ -320,6 +535,16 @@ export const sources = [
         "path": "/models/toycar/simple_tree_5.018_lev2.glb"
     },
     {
+        "name": "simple_tree_5.019.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.019.001_lev2.glb"
+    },
+    {
+        "name": "simple_tree_5.019.002_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/simple_tree_5.019.002_lev2.glb"
+    },
+    {
         "name": "simple_tree_5.019_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/simple_tree_5.019_lev2.glb"
@@ -380,431 +605,6 @@ export const sources = [
         "path": "/models/toycar/simple_tree_5_lev2.glb"
     },
     {
-        "name": "track-road-wide-corner-large.001_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.001_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.002_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.002_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.003_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.003_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.004_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.004_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.005_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.005_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.006_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.006_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.007_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.007_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.008_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.008_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.009_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.009_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.010_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.010_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.011_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.011_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.012_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.012_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.013_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.013_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.014_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.014_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.015_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.015_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.016_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.016_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.017_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.017_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.018_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.018_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.019_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.019_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.020_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.020_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.021_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.021_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.022_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.022_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.023_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.023_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.024_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.024_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.025_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.025_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.026_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.026_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large.027_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large.027_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-large_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-large_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-small.001_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-small.001_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-small.002_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-small.002_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-small.003_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-small.003_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-small.004_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-small.004_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-corner-small_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-corner-small_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.001_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.001_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.002_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.002_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.003_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.003_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.004_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.004_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.005_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.005_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.006_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.006_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.007_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.007_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.008_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.008_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.009_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.009_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.010_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.010_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.011_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.011_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.012_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.012_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.013_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.013_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.014_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.014_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.015_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.015_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.016_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.016_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.017_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.017_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.018_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.018_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.019_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.019_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.020_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.020_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.021_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.021_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.022_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.022_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.023_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.023_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.024_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.024_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.025_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.025_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.026_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.026_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.027_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.027_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.028_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.028_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.029_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.029_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.030_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.030_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.031_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.031_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.032_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.032_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.033_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.033_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.034_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.034_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.035_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.035_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.036_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.036_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.037_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.037_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.038_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.038_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.039_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.039_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.040_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.040_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.041_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.041_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.042_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.042_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.043_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.043_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight.044_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight.044_lev2.glb"
-    },
-    {
-        "name": "track-road-wide-straight_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-road-wide-straight_lev2.glb"
-    },
-    {
-        "name": "track-striped-wide-straight-bump-up.001_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-striped-wide-straight-bump-up.001_lev2.glb"
-    },
-    {
-        "name": "track-striped-wide-straight-bump-up_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-striped-wide-straight-bump-up_lev2.glb"
-    },
-    {
-        "name": "track-wide-corner-large.001_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-wide-corner-large.001_lev2.glb"
-    },
-    {
-        "name": "track-wide-corner-large.002_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-wide-corner-large.002_lev2.glb"
-    },
-    {
-        "name": "track-wide-corner-large.003_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-wide-corner-large.003_lev2.glb"
-    },
-    {
-        "name": "track-wide-corner-large.004_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-wide-corner-large.004_lev2.glb"
-    },
-    {
-        "name": "track-wide-corner-large_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/track-wide-corner-large_lev2.glb"
-    },
-    {
         "name": "tree-pine-large.006_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/tree-pine-large.006_lev2.glb"
@@ -815,9 +615,9 @@ export const sources = [
         "path": "/models/toycar/tree-pine-large.007_lev2.glb"
     },
     {
-        "name": "tree-pine-large.009_lev2",
+        "name": "tree_lev2",
         "type": "gltfModel",
-        "path": "/models/toycar/tree-pine-large.009_lev2.glb"
+        "path": "/models/toycar/tree_lev2.glb"
     },
     {
         "name": "unit-mansion.001_lev2",
