@@ -1,41 +1,13 @@
-// Solo se cargan al inicio los recursos esenciales y los modelos del NIVEL 1.
-// Los modelos del nivel 2 se cargan dinámicamente cuando se llega a ese nivel
-// mediante ToyCarLoader.loadModelsForLevel() para no agotar los recursos del navegador.
-
 export default [
-    {
-        name: 'environmentMapTexture',
-        type: 'cubeTexture',
-        path: [
-            '/textures/environmentMap/px.jpg',
-            '/textures/environmentMap/nx.jpg',
-            '/textures/environmentMap/py.jpg',
-            '/textures/environmentMap/ny.jpg',
-            '/textures/environmentMap/pz.jpg',
-            '/textures/environmentMap/nz.jpg'
-        ]
-    },
-    {
-        name: 'grassColorTexture',
-        type: 'texture',
-        path: '/textures/dirt/color.jpg'
-    },
-    {
-        name: 'grassNormalTexture',
-        type: 'texture',
-        path: '/textures/dirt/normal.jpg'
-    },
-    {
-        name: 'foxModel',
-        type: 'gltfModel',
-        path: '/models/Fox/glTF/Fox.gltf'
-    },
-    {
-        name: 'robotModel',
-        type: 'gltfModel',
-        path: '/models/Robot/Robot.glb'
-    },
-    // ─── NIVEL 1 ───────────────────────────────────────────────────────────────
+    { name: 'environmentMapTexture', type: 'cubeTexture', path: ['/textures/environmentMap/px.jpg','/textures/environmentMap/nx.jpg','/textures/environmentMap/py.jpg','/textures/environmentMap/ny.jpg','/textures/environmentMap/pz.jpg','/textures/environmentMap/nz.jpg'] },
+    { name: 'grassColorTexture', type: 'texture', path: '/textures/dirt/color.jpg' },
+    { name: 'grassNormalTexture', type: 'texture', path: '/textures/dirt/normal.jpg' },
+    { name: 'foxModel', type: 'gltfModel', path: '/models/Fox/glTF/Fox.gltf' },
+    // Jugador: Astronaut
+    { name: 'robotModel', type: 'gltfModel', path: '/models/astronaut/astronaut.glb' },
+    // Enemigo: Dino
+    { name: 'dinoModel', type: 'gltfModel', path: '/models/dino/dino.glb' },
+    // NIVEL 1
     { name: "baked_lev1", type: "gltfModel", path: "/models/toycar/baked_lev1.glb" },
     { name: "barn_lev1", type: "gltfModel", path: "/models/toycar/barn_lev1.glb" },
     { name: "bigbarn_window_lev1", type: "gltfModel", path: "/models/toycar/bigbarn_window_lev1.glb" },
@@ -124,7 +96,7 @@ export default [
     { name: "simple_tree_5.005_lev1", type: "gltfModel", path: "/models/toycar/simple_tree_5.005_lev1.glb" },
     { name: "simple_tree_5.006_lev1", type: "gltfModel", path: "/models/toycar/simple_tree_5.006_lev1.glb" },
     { name: "simple_tree_5.007_lev1", type: "gltfModel", path: "/models/toycar/simple_tree_5.007_lev1.glb" },
-    { name: "simple_tree_5.008_lev1", path: "/models/toycar/simple_tree_5.008_lev1.glb", type: "gltfModel" },
+    { name: "simple_tree_5.008_lev1", type: "gltfModel", path: "/models/toycar/simple_tree_5.008_lev1.glb" },
     { name: "simple_tree_5.009_lev1", type: "gltfModel", path: "/models/toycar/simple_tree_5.009_lev1.glb" },
     { name: "simple_tree_5.010_lev1", type: "gltfModel", path: "/models/toycar/simple_tree_5.010_lev1.glb" },
     { name: "simple_tree_5.011_lev1", type: "gltfModel", path: "/models/toycar/simple_tree_5.011_lev1.glb" },
@@ -223,5 +195,4 @@ export default [
     { name: "tree-pine-large.010_lev1", type: "gltfModel", path: "/models/toycar/tree-pine-large.010_lev1.glb" },
     { name: "tree-pine-large.011_lev1", type: "gltfModel", path: "/models/toycar/tree-pine-large.011_lev1.glb" },
     { name: "tree-pine-large.012_lev1", type: "gltfModel", path: "/models/toycar/tree-pine-large.012_lev1.glb" }
-    // ─── Los modelos del NIVEL 2 se cargan dinámicamente en ToyCarLoader ───────
 ]
