@@ -6,9 +6,7 @@ router.get('/', blockController.getBlocks)
 router.post('/', blockController.addBlock)
 router.post('/batch', blockController.addMultipleBlocks)
 router.get('/ping', (req, res) => {
-    res.json({ message: 'pong' });
-});
-
-
+    res.json({ message: 'pong' })
+})
 
 module.exports = router

@@ -4,9 +4,9 @@ export default [
     { name: 'grassNormalTexture', type: 'texture', path: '/textures/dirt/normal.jpg' },
     { name: 'foxModel', type: 'gltfModel', path: '/models/Fox/glTF/Fox.gltf' },
     // Jugador: Astronaut
-    { name: 'robotModel', type: 'gltfModel', path: '/models/astronaut/astronaut.glb' },
+    { name: 'robotModel', type: 'gltfModel', path: '/models/Robot/Astronaut.glb' },
     // Enemigo: Dino
-    { name: 'dinoModel', type: 'gltfModel', path: '/models/dino/dino.glb' },
+    { name: 'dinoModel', type: 'gltfModel', path: '/models/Robot/Dino.glb' },
     // NIVEL 1
     { name: "baked_lev1", type: "gltfModel", path: "/models/toycar/baked_lev1.glb" },
     { name: "barn_lev1", type: "gltfModel", path: "/models/toycar/barn_lev1.glb" },

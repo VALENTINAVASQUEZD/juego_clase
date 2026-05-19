@@ -54,8 +54,10 @@ export default class World {
             this.fox = new Fox(this.experience)
             this.robot = new Robot(this.experience)
 
-            this.enemyTemplate = new THREE.Object3D() 
-            
+            this.enemyTemplate = new THREE.Mesh(
+                new THREE.BoxGeometry(1, 1, 1),
+                new THREE.MeshStandardMaterial({ color: 0xff0000 })
+            )
             const enemiesCountEnv = parseInt(import.meta.env.VITE_ENEMIES_COUNT || '3', 10)
             const enemiesCount = Number.isFinite(enemiesCountEnv) && enemiesCountEnv > 0 ? enemiesCountEnv : 3
             this.spawnEnemies(enemiesCount)
@@ -413,6 +415,8 @@ export default class World {
             this.finalPrizeActivated = false;
             this.defeatTriggered = false;
             this.experience.menu.setStatus?.(`🎖️ Puntos: ${this.points}`);
+            // Actualizar nivel en el HUD — Actividad 3
+            this.experience.menu.setLevel?.(level, this.levelManager.totalLevels);
 
             // Modelos de física precisa
             const publicPath = (p) => {
