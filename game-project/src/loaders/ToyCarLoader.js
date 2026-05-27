@@ -49,6 +49,99 @@ export default class ToyCarLoader {
         });
     }
 
+
+    // Actividad 6: genera una textura de canvas vistosa para cada cartel según nivel y índice
+    _makeBillboardTexture(level, index) {
+        const W = 512, H = 512
+        const canvas = document.createElement('canvas')
+        canvas.width = W; canvas.height = H
+        const ctx = canvas.getContext('2d')
+
+        // Paletas y temas por nivel
+        const themes = [
+            { bg: '#0a0a2e', accent: '#00e5ff', text: '#ffffff', emoji: '🚀', title: 'NIVEL 1', sub: 'ESPACIO PROFUNDO' },
+            { bg: '#1a0a00', accent: '#ff6600', text: '#ffdd00', emoji: '🔥', title: 'NIVEL 2', sub: 'ZONA DE PELIGRO' },
+            { bg: '#001a0a', accent: '#00ff88', text: '#ffffff', emoji: '⚡', title: 'NIVEL 3', sub: 'ENERGIA EXTREMA' },
+            { bg: '#1a001a', accent: '#ff00ff', text: '#ffffff', emoji: '💎', title: 'NIVEL 4', sub: 'DIMENSION OCULTA' },
+            { bg: '#1a1a00', accent: '#ffff00', text: '#ffffff', emoji: '🏆', title: 'NIVEL 5', sub: 'JEFE FINAL' },
+        ]
+
+        const altSubs = [
+            ['CUIDADO ENEMIGO', '¡RECOGE MONEDAS!'],
+            ['¡NO TE ATRAPEN!', 'CORRE MAS RAPIDO'],
+            ['ZONA RESTRINGIDA', '¡PELIGRO MAXIMO!'],
+            ['RECUERDA SALTAR', 'EVITA AL ENEMIGO'],
+            ['¡ULTIMO NIVEL!',  'DA TODO DE TI'],
+        ]
+
+        const t = themes[Math.min(level - 1, themes.length - 1)]
+        const subText = index === 0 ? t.sub : (altSubs[Math.min(level - 1, altSubs.length - 1)][1] || t.sub)
+
+        // Fondo
+        ctx.fillStyle = t.bg
+        ctx.fillRect(0, 0, W, H)
+
+        // Borde brillante
+        ctx.strokeStyle = t.accent
+        ctx.lineWidth = 14
+        ctx.strokeRect(10, 10, W - 20, H - 20)
+
+        // Borde interior
+        ctx.strokeStyle = t.text
+        ctx.lineWidth = 3
+        ctx.strokeRect(24, 24, W - 48, H - 48)
+
+        // Banda superior degradada
+        const grad = ctx.createLinearGradient(0, 0, W, 0)
+        grad.addColorStop(0, t.accent + '44')
+        grad.addColorStop(0.5, t.accent + 'aa')
+        grad.addColorStop(1, t.accent + '44')
+        ctx.fillStyle = grad
+        ctx.fillRect(24, 24, W - 48, 120)
+
+        // Emoji grande
+        ctx.font = 'bold 100px serif'
+        ctx.textAlign = 'center'
+        ctx.textBaseline = 'middle'
+        ctx.fillText(t.emoji, W / 2, 84)
+
+        // Título principal
+        ctx.font = 'bold 72px Arial Black, Arial'
+        ctx.fillStyle = t.accent
+        ctx.shadowColor = t.accent
+        ctx.shadowBlur = 20
+        ctx.fillText(t.title, W / 2, 200)
+        ctx.shadowBlur = 0
+
+        // Línea divisoria
+        ctx.strokeStyle = t.accent
+        ctx.lineWidth = 4
+        ctx.beginPath()
+        ctx.moveTo(60, 255); ctx.lineTo(W - 60, 255)
+        ctx.stroke()
+
+        // Subtítulo
+        ctx.font = 'bold 38px Arial'
+        ctx.fillStyle = t.text
+        ctx.fillText(subText, W / 2, 320)
+
+        // Puntos decorativos
+        for (let i = 0; i < 5; i++) {
+            ctx.beginPath()
+            ctx.arc(80 + i * 90, 410, 14, 0, Math.PI * 2)
+            ctx.fillStyle = i < (level) ? t.accent : t.accent + '33'
+            ctx.fill()
+        }
+
+        // Texto inferior
+        ctx.font = '28px Arial'
+        ctx.fillStyle = t.accent + 'cc'
+        ctx.fillText('● AVENTURA ESPACIAL ●', W / 2, 470)
+
+        const texture = new THREE.CanvasTexture(canvas)
+        return texture
+    }
+
     _applyTextureToMeshes(root, imagePath, matcher, options = {}) {
         const matchedMeshes = [];
         root.traverse((child) => {
@@ -221,13 +314,21 @@ export default class ToyCarLoader {
             }
         });
 
-        // Textura en carteles cilíndricos
-        this._applyTextureToMeshes(
-            model,
-            '/textures/ima1.jpg',
-            (child) => child.name === 'Cylinder001' || (child.name && child.name.toLowerCase().includes('cylinder')),
-            { rotation: -Math.PI / 2, center: { x: 0.5, y: 0.5 }, mirrorX: true }
-        );
+        // Actividad 6: carteles vistosos — 2 por nivel con textura canvas única
+        // Solo aplicar a modelos que sean carteles (cylinder.001*), no a árboles
+        const isCartel = block.name.toLowerCase().includes('cylinder')
+        const currentLevel = this.experience?.world?.levelManager?.currentLevel ?? 1
+        let cylinderCount = 0
+        model.traverse((child) => {
+            if (isCartel && child.isMesh && (child.name === 'Cylinder001' || child.name.toLowerCase().includes('cylinder'))) {
+                const texture = this._makeBillboardTexture(currentLevel, cylinderCount % 2)
+                texture.flipY = false
+                if ('colorSpace' in texture) texture.colorSpace = THREE.SRGBColorSpace
+                child.material = new THREE.MeshBasicMaterial({ map: texture })
+                child.material.needsUpdate = true
+                cylinderCount++
+            }
+        })
 
         // Modelos baked
         if (block.name.includes('baked')) {

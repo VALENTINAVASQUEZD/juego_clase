@@ -10,12 +10,6 @@
     "low_poly_cuboid_rock_012.001_lev1.003_lev4",
     "low_poly_cuboid_rock_012.001_lev1.004_lev4",
     "low_poly_cuboid_rock_012.001_lev1.005_lev4",
-    "planks.001_lev4",
-    "planks.003_lev4",
-    "planks.004_lev4",
-    "planks.006_lev4",
-    "planks.007_lev4",
-    "planks.008_lev4",
     "planks.009_lev4",
     "planks.011_lev4",
     "planks.012_lev4",
@@ -179,5 +173,8 @@
     "fence.007_lev4",
     "fence.008_lev4",
     "fence.009_lev4",
-    "fence-curved.002_lev4"
+    "fence-curved.002_lev4",
+    "cylinder.001_lev1_lev4",
+    "cylinder.001_lev1.001_lev4",
+    "cylinder.001_lev1.002_lev4"
 ]

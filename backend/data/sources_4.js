@@ -50,6 +50,21 @@ export const sources = [
         "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.glb"
     },
     {
+        "name": "cylinder.001_lev1.001_lev4",
+        "type": "gltfModel",
+        "path": "/models/toycar/cylinder.001_lev1.001_lev4.glb"
+    },
+    {
+        "name": "cylinder.001_lev1.002_lev4",
+        "type": "gltfModel",
+        "path": "/models/toycar/cylinder.001_lev1.002_lev4.glb"
+    },
+    {
+        "name": "cylinder.001_lev1_lev4",
+        "type": "gltfModel",
+        "path": "/models/toycar/cylinder.001_lev1_lev4.glb"
+    },
+    {
         "name": "fence-curved.001_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/fence-curved.001_lev4.glb"
@@ -153,36 +168,6 @@ export const sources = [
         "name": "plane_lev1_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/plane_lev1_lev4.glb"
-    },
-    {
-        "name": "planks.001_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.001_lev4.glb"
-    },
-    {
-        "name": "planks.003_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.003_lev4.glb"
-    },
-    {
-        "name": "planks.004_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.004_lev4.glb"
-    },
-    {
-        "name": "planks.006_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.006_lev4.glb"
-    },
-    {
-        "name": "planks.007_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.007_lev4.glb"
-    },
-    {
-        "name": "planks.008_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.008_lev4.glb"
     },
     {
         "name": "planks.009_lev4",

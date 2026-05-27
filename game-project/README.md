@@ -1,112 +1,186 @@
-# 🎮 game-project
+## Proyecto Final UCC – Backend + Game (React + Three.js)
+## Maria Valentina Vasquez Delgado , Juan David Moncayo Muñoz 
+Monorepo con dos aplicaciones principales:
 
-> Proyecto base para el desarrollo de entornos 3D interactivos usando **React + Three.js**, con un enfoque estructurado en **Programación Orientada a Objetos (OOP)**.
-
----
-
-## 🚀 Descripción
-
-Este repositorio proporciona la base de trabajo para crear un proyecto 3D inmersivo y escalable, utilizando **React** para la integración y estado, junto a **Three.js** para la representación gráfica.
-
-El proyecto está diseñado para que los estudiantes y desarrolladores puedan enfocarse en la construcción progresiva de su entorno interactivo, aplicando principios sólidos de arquitectura y OOP.
+- `backend`: API REST y servidor WebSocket (Socket.io) con Node.js, Express y **PostgreSQL**. Incluye autenticación con **JWT**.
+- `game-project`: Frontend 3D con React, Vite y Three.js. Contiene **5 niveles** de juego con enemigos, premios y obstáculos.
 
 ---
 
-## 🎯 Objetivos del Proyecto
+### Requisitos
 
-✅ Aplicar buenas prácticas de **Programación Orientada a Objetos** en el desarrollo de entornos 3D.  
-✅ Integrar **Three.js** dentro de un ecosistema moderno basado en React.  
-✅ Facilitar la escalabilidad y mantenibilidad mediante una estructura modular y clara.  
-✅ Centralizar la gestión del entorno a través de la clase principal `Experience`.  
+- Node.js 18+ y npm
+- PostgreSQL 14+ (local o en la nube, p.ej. Supabase / Railway)
 
 ---
 
-## 📂 Estructura del Proyecto
+### Estructura
 
 ```
-game-project/
-├── public/
-├── src/
-│   ├── components/        # Componentes React
-│   ├── styles/            # Estilos y assets
-│   ├── Experience/        # Núcleo del entorno 3D
-│   │   ├── Experience.js  # Clase principal (Entry Point)
-│   │   ├── World/         # Manejo del mundo 3D
-│   │   ├── Environment/   # Configuración de luces, cámaras y ambiente
-│   │   ├── Resources/     # Carga y gestión de assets
-│   │   ├── Sources.js     # Definición de recursos
-│   │   ├── Sizes.js      # Gestión de dimensiones responsivas
-│   │   ├── Time.js       # Control de tiempo y animaciones
-│   │   └── Debug.js      # Herramientas de depuración (opcional)
-│   ├── App.jsx           # Integración con React
-│   └── main.jsx          # Entry point React
-├── package.json
-└── README.md
+juego_clase/
+├─ backend/            # API REST + Socket.io + autenticación JWT
+└─ game-project/       # Frontend 3D (React + Vite + Three.js)
 ```
 
 ---
 
-## 🧩 ¿Qué hace la clase `Experience`?
+### Variables de entorno
 
-La clase `Experience` es el **corazón del proyecto**. Su función principal es **gestionar y centralizar** todos los elementos y subclases del entorno 3D, incluyendo:
+Crear `backend/.env` con:
 
-| Subclase / Módulo | Función                                                  |
-|-------------------|----------------------------------------------------------|
-| **Sizes**        | Controla el tamaño dinámico de la escena (responsive).    |
-| **Time**         | Controla el tiempo y la animación del render.             |
-| **World**        | Maneja los elementos y lógica del mundo 3D.               |
-| **Environment**  | Configura luces, cámara y ambiente.                      |
-| **Resources**    | Carga y gestiona los modelos y texturas.                  |
-| **Sources**      | Define la lista de recursos a cargar.                     |
+```env
+PG_HOST=localhost
+PG_PORT=5432
+PG_USER=postgres
+PG_PASSWORD=tu_password
+PG_DATABASE=threejs_blocks
+JWT_SECRET=cambia_esto_por_un_secreto_seguro
+PORT=3001
+```
 
-Esto permite mantener un flujo ordenado y facilitar la comunicación entre componentes, evitando dependencias innecesarias.
+Crear `game-project/.env` (o `.env.local`) con:
 
----
-
-## 🎮 ¿Qué aprenderás trabajando aquí?
-
-✅ Integrar y manipular entornos 3D con Three.js y React  
-✅ Implementar conceptos de OOP en un proyecto real  
-✅ Gestionar estados, recursos y animaciones de forma eficiente  
-✅ Comprender la importancia de la arquitectura modular en proyectos 3D
+```env
+VITE_API_URL=http://localhost:3001
+VITE_ENEMIES_COUNT=1
+```
 
 ---
 
-## ⚙️ Instalación y ejecución
+### Instalación
 
-1. Clona este repositorio:
 ```bash
-git clone https://github.com/tu-usuario/game-project.git
-cd game-project
-```
+# Backend
+cd backend
+npm install
 
-2. Instala las dependencias:
-```bash
+# Frontend
+cd ../game-project
 npm install
 ```
 
-3. Ejecuta el proyecto:
+---
+
+### Base de datos (PostgreSQL)
+
+El backend usa PostgreSQL. Asegúrate de tener una base de datos creada y ejecuta el seed si es necesario:
+
 ```bash
-npm run dev
+cd backend
+node seed.js   # carga bloques iniciales (opcional)
+```
+
+> Si usas Supabase o Railway, configura las variables `PG_*` con los datos de conexión del panel de tu servicio.
+
+---
+
+### Ejecución en desarrollo
+
+```bash
+# Terminal 1 – Backend
+cd backend && node app.js
+# → http://localhost:3001
+
+# Terminal 2 – Frontend
+cd game-project && npm run dev
+# → http://localhost:5173
 ```
 
 ---
 
-## 🌐 Tecnologías utilizadas
+### Controles del juego
 
-- [React](https://react.dev/)
-- [Three.js](https://threejs.org/)
-- [Vite](https://vitejs.dev/) (para empaquetado)
-- Programación Orientada a Objetos (POO)
-- Estructura modular y escalable
+| Tecla | Acción |
+|-------|--------|
+| ↑ ↓ ← → | Mover personaje |
+| `Espacio` | Saltar |
+| `Shift` | **Correr (sprint)** |
+
+---
+
+### Los 5 niveles
+
+| Nivel | Tema | Descripción |
+|-------|------|-------------|
+| 1 | Espacio Profundo | Nivel introductorio, 1 enemigo, 5 s de gracia |
+| 2 | Zona de Peligro | Plataformas elevadas, más obstáculos |
+| 3 | Energía Extrema | Velocidad del enemigo aumentada |
+| 4 | Dimensión Oculta | Diseño laberíntico |
+| 5 | Jefe Final | Mayor dificultad, nivel definitivo |
+
+Cada nivel tiene 2 carteles vistosos contextuales. El enemigo espera **5 segundos** antes de perseguir al jugador al iniciar cada nivel.
 
 ---
 
-## 📄 Licencia
+### Autenticación JWT
 
-Este proyecto es de uso académico y formativo para estudiantes y desarrolladores que deseen aprender sobre entornos 3D aplicados a React y OOP.
+1. `POST /api/auth/register` → Registra usuario, retorna `{ token }`.
+2. `POST /api/auth/login` → Autentica usuario, retorna `{ token }`.
+3. Rutas protegidas requieren header `Authorization: Bearer <token>`.
 
 ---
-## 🧑 Autor
-- Gustavo Willyn Sánchez Rodríguez
-- email: guswillsan@gmail.com
+
+### API REST
+
+Base URL: `http://localhost:3001/api`
+
+- `GET  /api/blocks?level=1` → Lista bloques por nivel.
+- `POST /api/blocks` → Crea un bloque `{ name, x, y, z, level }`.
+- `POST /api/blocks/batch` → Inserta múltiples bloques.
+- `GET  /api/blocks/ping` → Healthcheck.
+- `POST /api/auth/register` → Registro.
+- `POST /api/auth/login` → Login + JWT.
+
+---
+
+### WebSocket (multijugador)
+
+Socket.io en `http://localhost:3001`. Eventos: `new-player`, `update-position`, `remove-player`, `players-update`, `existing-players`.
+
+---
+
+### Despliegue en Vercel (frontend)
+
+1. Sube el repositorio a GitHub.
+2. En [vercel.com](https://vercel.com) → **New Project** → importa el repo.
+3. Configura **Root Directory**: `game-project`.
+4. Agrega variables de entorno en el panel de Vercel:
+   ```
+   VITE_API_URL=https://tu-backend.railway.app
+   VITE_ENEMIES_COUNT=1
+   ```
+5. **Deploy**. Vercel detecta Vite automáticamente (build: `npm run build`, output: `dist`).
+
+> Para el backend usa Railway o Render (soportan Node.js + PostgreSQL). Copia la URL pública en `VITE_API_URL`.
+
+---
+
+### Estructura del frontend
+
+```
+game-project/
+├─ public/            # assets (modelos GLB, texturas, sonidos)
+└─ src/
+   ├─ Experience/     # Núcleo 3D
+   │   ├─ World/      # Robot, Enemy, LevelManager, World
+   │   └─ Utils/      # KeyboardControls, Physics, Time...
+   ├─ loaders/        # ToyCarLoader
+   ├─ network/        # SocketManager
+   └─ controls/       # MobileControls
+```
+
+---
+
+### Solución de problemas
+
+- Verifica que PostgreSQL esté corriendo y las variables `PG_*` sean correctas.
+- Si el frontend no carga datos, revisa `VITE_API_URL` en la consola del navegador.
+- CORS: en producción cambia `origin: '*'` al dominio de Vercel.
+- JWT expirado: vuelve a hacer login para obtener un token nuevo.
+
+---
+
+### Licencia y autoría
+
+- Autor: Gustavo Willyn Sánchez Rodríguez — `guswillsan@gmail.com`
+- Licencia: ISC

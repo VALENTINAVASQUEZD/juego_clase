@@ -314,6 +314,11 @@ export default class Experience {
     if (this.world) {
       this.world.gameStarted = true
     }
+
+    // Actividad 3: actualizar HUD al nivel inicial (nivel 1) al arrancar
+    const totalLevels = this.world?.levelManager?.totalLevels ?? 5
+    this.menu?.setLevel?.(1, totalLevels)
+
     console.log('🎮 Iniciando partida...')
   }
 

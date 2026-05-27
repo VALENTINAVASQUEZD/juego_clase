@@ -56,6 +56,7 @@ export default class Robot {
 
         // Detectar contacto con el suelo para habilitar salto
         this.isOnGround = false
+        this._jumpCooldown = 0
         this.body.addEventListener('collide', (e) => {
             const contact = e.contact
             // La normal apunta hacia arriba si colisionamos con algo debajo
@@ -156,20 +157,27 @@ export default class Robot {
         this.animation.mixer.update(delta)
 
         const keys = this.keyboard.getState()
-        const moveForce = 120
+        const isSprinting = keys.shift
+        const moveForce = isSprinting ? 220 : 120
+        const maxSpeed = isSprinting ? 25 : 15
         const turnSpeed = 2.5
         let isMoving = false
 
-        const maxSpeed = 15
         this.body.velocity.x = Math.max(Math.min(this.body.velocity.x, maxSpeed), -maxSpeed)
         this.body.velocity.z = Math.max(Math.min(this.body.velocity.z, maxSpeed), -maxSpeed)
 
         const forward = new THREE.Vector3(0, 0, 1).applyQuaternion(this.group.quaternion)
 
-        // Resetear isOnGround cada frame; se vuelve true si hay colisión
-        this.isOnGround = Math.abs(this.body.velocity.y) < 0.5
+        // isOnGround se activa por evento collide (ver setPhysics), se apaga al saltar
+        // _jumpCooldown evita saltos en bucle
+        if (this._jumpCooldown > 0) {
+            this._jumpCooldown -= delta
+            this.isOnGround = false
+        }
 
-        if (keys.space && this.isOnGround) {
+        if (keys.space && this.isOnGround && !(this._jumpCooldown > 0)) {
+            this.isOnGround = false
+            this._jumpCooldown = 0.5  // medio segundo antes de poder volver a saltar
             this.body.applyImpulse(new CANNON.Vec3(forward.x * 0.5, 3, forward.z * 0.5))
             this.animation.play('jump')
             return
@@ -271,6 +279,7 @@ export default class Robot {
 
         // Restaurar detección de suelo
         this.isOnGround = false
+        this._jumpCooldown = 0
         this.body.addEventListener('collide', (e) => {
             const contact = e.contact
             const normalY = contact.ni ? contact.ni.y : 0
