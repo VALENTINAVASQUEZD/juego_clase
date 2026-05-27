@@ -60,7 +60,7 @@ export default class World {
             )
             const enemiesCountEnv = parseInt(import.meta.env.VITE_ENEMIES_COUNT || '3', 10)
             const enemiesCount = Number.isFinite(enemiesCountEnv) && enemiesCountEnv > 0 ? enemiesCountEnv : 3
-            this.spawnEnemies(enemiesCount)
+            this.spawnEnemies(enemiesCount, 5.0)
 
             this.experience.vr.bindCharacter(this.robot)
             this.thirdPersonCamera = new ThirdPersonCamera(this.experience, this.robot.group)
@@ -85,11 +85,11 @@ export default class World {
         })
     }
 
-    spawnEnemies(count = 3) {
+    spawnEnemies(count = 3, initialDelay = 5.0) {
         if (!this.robot?.body?.position) return
         const playerPos = this.robot.body.position
-        const minRadius = 25
-        const maxRadius = 40
+        const minRadius = 10
+        const maxRadius = 18
 
         if (this.enemies?.length) {
             this.enemies.forEach(e => e?.destroy?.())
@@ -112,7 +112,9 @@ export default class World {
                 experience: this.experience
             })
 
-            enemy.delayActivation = 1.0 + i * 0.5
+            // initialDelay = tiempo base antes de que el enemigo empiece a perseguir
+            // cada enemigo adicional tarda 0.5s más que el anterior
+            enemy.delayActivation = initialDelay + i * 0.5
             this.enemies.push(enemy)
         }
     }
@@ -452,6 +454,14 @@ export default class World {
             this.allowPrizePickup = false
             setTimeout(() => { this.allowPrizePickup = true }, 2000)
 
+            // Re-spawnear enemigos con 5s de delay para dar tiempo al jugador de orientarse
+            const enemiesCountEnv = parseInt(import.meta.env.VITE_ENEMIES_COUNT || '3', 10)
+            const enemiesCount = Number.isFinite(enemiesCountEnv) && enemiesCountEnv > 0 ? enemiesCountEnv : 3
+            setTimeout(() => {
+                this.spawnEnemies(enemiesCount, 5.0)
+                console.log(`👾 Enemigos spawneados en nivel ${level} con 5s de delay inicial`)
+            }, 1200) // esperar a que el robot esté reposicionado antes de spawnear
+
         } catch (error) {
             console.error('❌ Error cargando nivel:', error);
         }
@@ -538,15 +548,19 @@ export default class World {
     }
 
     resetRobotPosition(spawn = { x: 0, y: 1.5, z: 0 }) {
-        if (!this.robot?.body || !this.robot?.group) return
+        if (!this.robot) return
 
-        this.robot.body.position.set(spawn.x, spawn.y, spawn.z)
-        this.robot.body.velocity.set(0, 0, 0)
-        this.robot.body.angularVelocity.set(0, 0, 0)
-        this.robot.body.quaternion.setFromEuler(0, 0, 0)
-
-        this.robot.group.position.set(spawn.x, spawn.y, spawn.z)
-        this.robot.group.rotation.set(0, 0, 0)
+        // Usar revive() para manejar el caso en que el robot haya muerto (body=null)
+        if (typeof this.robot.revive === 'function') {
+            this.robot.revive(spawn)
+        } else if (this.robot.body) {
+            this.robot.body.position.set(spawn.x, spawn.y, spawn.z)
+            this.robot.body.velocity.set(0, 0, 0)
+            this.robot.body.angularVelocity.set(0, 0, 0)
+            this.robot.body.quaternion.setFromEuler(0, 0, 0)
+            this.robot.group.position.set(spawn.x, spawn.y, spawn.z)
+            this.robot.group.rotation.set(0, 0, 0)
+        }
     }
 
     async _processLocalBlocks(blocks) {

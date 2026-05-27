@@ -54,6 +54,17 @@ export default class Robot {
         this.body.sleep()
         this.body.material = this.physics.robotMaterial
 
+        // Detectar contacto con el suelo para habilitar salto
+        this.isOnGround = false
+        this.body.addEventListener('collide', (e) => {
+            const contact = e.contact
+            // La normal apunta hacia arriba si colisionamos con algo debajo
+            const normalY = contact.ni ? contact.ni.y : 0
+            if (Math.abs(normalY) > 0.5) {
+                this.isOnGround = true
+            }
+        })
+
         this.physics.world.addBody(this.body)
         setTimeout(() => { this.body.wakeUp() }, 100)
     }
@@ -145,7 +156,7 @@ export default class Robot {
         this.animation.mixer.update(delta)
 
         const keys = this.keyboard.getState()
-        const moveForce = 80
+        const moveForce = 120
         const turnSpeed = 2.5
         let isMoving = false
 
@@ -155,7 +166,10 @@ export default class Robot {
 
         const forward = new THREE.Vector3(0, 0, 1).applyQuaternion(this.group.quaternion)
 
-        if (keys.space && this.body.position.y <= 0.51) {
+        // Resetear isOnGround cada frame; se vuelve true si hay colisión
+        this.isOnGround = Math.abs(this.body.velocity.y) < 0.5
+
+        if (keys.space && this.isOnGround) {
             this.body.applyImpulse(new CANNON.Vec3(forward.x * 0.5, 3, forward.z * 0.5))
             this.animation.play('jump')
             return
@@ -226,6 +240,57 @@ export default class Robot {
             this.group.rotation.y = angle
             this.body.quaternion.setFromEuler(0, this.group.rotation.y, 0)
         }
+    }
+
+
+    revive(spawn = { x: 0, y: 1.5, z: 0 }) {
+        // Si el cuerpo fue destruido por die(), recrearlo
+        if (!this.body) {
+            const shape = new CANNON.Sphere(0.4)
+            this.body = new CANNON.Body({
+                mass: 2,
+                shape,
+                position: new CANNON.Vec3(spawn.x, spawn.y, spawn.z),
+                linearDamping: 0.05,
+                angularDamping: 0.9
+            })
+            this.body.angularFactor.set(0, 1, 0)
+            this.body.velocity.setZero()
+            this.body.angularVelocity.setZero()
+            this.body.material = this.physics.robotMaterial
+            this.physics.world.addBody(this.body)
+            console.log('♻️ Cuerpo físico del robot recreado')
+        }
+
+        // Restaurar posición y velocidades
+        this.body.position.set(spawn.x, spawn.y, spawn.z)
+        this.body.velocity.set(0, 0, 0)
+        this.body.angularVelocity.set(0, 0, 0)
+        this.body.quaternion.setFromEuler(0, 0, 0)
+        this.body.wakeUp()
+
+        // Restaurar detección de suelo
+        this.isOnGround = false
+        this.body.addEventListener('collide', (e) => {
+            const contact = e.contact
+            const normalY = contact.ni ? contact.ni.y : 0
+            if (Math.abs(normalY) > 0.5) {
+                this.isOnGround = true
+            }
+        })
+
+        // Restaurar visual
+        this.group.position.set(spawn.x, spawn.y, spawn.z)
+        this.group.rotation.set(0, 0, 0)
+
+        // Restaurar animación a idle
+        if (this.animation?.actions?.idle && this.animation?.actions?.current !== this.animation?.actions?.idle) {
+            if (this.animation.actions.current) this.animation.actions.current.fadeOut(0.2)
+            this.animation.actions.idle.reset().fadeIn(0.2).play()
+            this.animation.actions.current = this.animation.actions.idle
+        }
+
+        console.log('✅ Robot revivido en', spawn)
     }
 
     die() {

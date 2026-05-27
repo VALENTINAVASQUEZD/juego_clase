@@ -3,8 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const modelsPath = path.join('C:/Users/steve/OneDrive/Escritorio/juego_blender/Blender_Threejs_Mongo/game-project/public/models/toycar5');
-const outputPath = path.join(__dirname, '../data/sources_5.js');
+const modelsPath = path.join('C:/Users/steve/OneDrive/Escritorio/juego_blender/Blender_Threejs_Mongo/game-project/public/models/toycar4');
+const outputPath = path.join(__dirname, '../data/sources_4.js');
 
 if (!fs.existsSync(modelsPath)) {
     console.error('❌ El directorio no existe:', modelsPath);

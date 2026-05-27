@@ -132,7 +132,7 @@ export default class Enemy {
 
         // Velocidad según distancia
         const distance = enemyPos.distanceTo(targetPos)
-        this.speed = distance < 4 ? 2.5 : this.baseSpeed
+        this.speed = distance < 6 ? 6.0 : this.baseSpeed
 
         // Volumen del sonido según cercanía
         const maxDistance = 10
@@ -152,8 +152,10 @@ export default class Enemy {
         if (direction.length() > 0.5) {
             direction.normalize()
             direction.scale(this.speed, direction)
+            // Despertar el body antes de asignar velocidad (allowSleep=true puede dormirlo)
+            this.body.wakeUp()
             this.body.velocity.x = direction.x
-            this.body.velocity.y = direction.y
+            this.body.velocity.y = this.body.velocity.y // mantener velocidad Y (gravedad)
             this.body.velocity.z = direction.z
         }
 

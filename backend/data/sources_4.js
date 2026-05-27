@@ -1,10 +1,5 @@
 export const sources = [
     {
-        "name": "baked_lev1_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/baked_lev1_lev4.glb"
-    },
-    {
         "name": "barn_lev1_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/barn_lev1_lev4.glb"
@@ -165,11 +160,6 @@ export const sources = [
         "path": "/models/toycar/planks.001_lev4.glb"
     },
     {
-        "name": "planks.002_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.002_lev4.glb"
-    },
-    {
         "name": "planks.003_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.003_lev4.glb"
@@ -178,11 +168,6 @@ export const sources = [
         "name": "planks.004_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.004_lev4.glb"
-    },
-    {
-        "name": "planks.005_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.005_lev4.glb"
     },
     {
         "name": "planks.006_lev4",
@@ -205,11 +190,6 @@ export const sources = [
         "path": "/models/toycar/planks.009_lev4.glb"
     },
     {
-        "name": "planks.010_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.010_lev4.glb"
-    },
-    {
         "name": "planks.011_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.011_lev4.glb"
@@ -230,11 +210,6 @@ export const sources = [
         "path": "/models/toycar/planks.014_lev4.glb"
     },
     {
-        "name": "planks.015_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.015_lev4.glb"
-    },
-    {
         "name": "planks.016_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.016_lev4.glb"
@@ -248,11 +223,6 @@ export const sources = [
         "name": "planks.018_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.018_lev4.glb"
-    },
-    {
-        "name": "planks.019_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.019_lev4.glb"
     },
     {
         "name": "planks.020_lev4",
@@ -278,11 +248,6 @@ export const sources = [
         "name": "planks.024_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.024_lev4.glb"
-    },
-    {
-        "name": "planks.025_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.025_lev4.glb"
     },
     {
         "name": "planks.026_lev4",
@@ -455,16 +420,6 @@ export const sources = [
         "path": "/models/toycar/planks.060_lev4.glb"
     },
     {
-        "name": "planks.061_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.061_lev4.glb"
-    },
-    {
-        "name": "planks.062_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.062_lev4.glb"
-    },
-    {
         "name": "planks.063_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.063_lev4.glb"
@@ -588,11 +543,6 @@ export const sources = [
         "name": "planks.087_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.087_lev4.glb"
-    },
-    {
-        "name": "planks.088_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.088_lev4.glb"
     },
     {
         "name": "planks.089_lev4",
@@ -943,11 +893,6 @@ export const sources = [
         "name": "planks.160_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.160_lev4.glb"
-    },
-    {
-        "name": "planks_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks_lev4.glb"
     },
     {
         "name": "simple_tree_5_lev1_lev4",
