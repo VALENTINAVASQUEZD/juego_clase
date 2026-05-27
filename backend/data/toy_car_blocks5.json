@@ -8,6 +8,78 @@
         "role": "default"
     },
     {
+        "name": "coin_structure_detailed.001_lev1_lev4_lev5",
+        "x": -14.032042503356934,
+        "y": 1.0772186517715454,
+        "z": -1.6513179540634155,
+        "level": 5,
+        "role": "default"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.001_lev5",
+        "x": 16.191890716552734,
+        "y": 1.0772186517715454,
+        "z": 9.445272445678711,
+        "level": 5,
+        "role": "default"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.002_lev5",
+        "x": -2.8600692749023438,
+        "y": 1.0772186517715454,
+        "z": 35.711517333984375,
+        "level": 5,
+        "role": "default"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.003_lev5",
+        "x": -6.632585048675537,
+        "y": 1.0772186517715454,
+        "z": -21.82505226135254,
+        "level": 5,
+        "role": "default"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.004_lev5",
+        "x": 33.511085510253906,
+        "y": 1.0772186517715454,
+        "z": -21.82505226135254,
+        "level": 5,
+        "role": "default"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.005_lev5",
+        "x": 21.670040130615234,
+        "y": 1.0772186517715454,
+        "z": -40.26252746582031,
+        "level": 5,
+        "role": "default"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.006_lev5",
+        "x": -11.943349838256836,
+        "y": 1.0772186517715454,
+        "z": 41.322669982910156,
+        "level": 5,
+        "role": "finalPrize"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.007_lev5",
+        "x": -33.73017501831055,
+        "y": 1.0772186517715454,
+        "z": 25.91649627685547,
+        "level": 5,
+        "role": "default"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.008_lev5",
+        "x": -35.89830780029297,
+        "y": 1.0772186517715454,
+        "z": -35.898807525634766,
+        "level": 5,
+        "role": "default"
+    },
+    {
         "name": "plane_lev1.001_lev5",
         "x": 0.015607774257659912,
         "y": 0.14174017310142517,

@@ -5,6 +5,51 @@ export const sources = [
         "path": "/models/toycar/baked_lev1_lev4_lev5.glb"
     },
     {
+        "name": "coin_structure_detailed.001_lev1_lev4.001_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.001_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.002_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.002_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.003_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.003_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.004_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.004_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.005_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.005_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.006_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.006_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.007_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.007_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4.008_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.008_lev5.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev1_lev4_lev5",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4_lev5.glb"
+    },
+    {
         "name": "group1015650822_lev5",
         "type": "gltfModel",
         "path": "/models/toycar/group1015650822_lev5.glb"

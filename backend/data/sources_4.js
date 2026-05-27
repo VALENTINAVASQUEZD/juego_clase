@@ -15,159 +15,109 @@ export const sources = [
         "path": "/models/toycar/bigbarn_window_lev1_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.001_lev4",
+        "name": "coin_structure_detailed.001_lev1.001_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.001_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1.001_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.002_lev4",
+        "name": "coin_structure_detailed.001_lev1.002_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.002_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1.002_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.003_lev4",
+        "name": "coin_structure_detailed.001_lev1.003_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.003_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1.003_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.004_lev4",
+        "name": "coin_structure_detailed.001_lev1.004_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.004_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1.004_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.005_lev4",
+        "name": "coin_structure_detailed.001_lev1.005_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.005_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1.005_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.006_lev4",
+        "name": "coin_structure_detailed.001_lev1.006_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.006_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1.006_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.007_lev4",
+        "name": "coin_structure_detailed.001_lev1.007_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.007_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1.007_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.008_lev4",
+        "name": "coin_structure_detailed.001_lev1_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.008_lev4.glb"
+        "path": "/models/toycar/coin_structure_detailed.001_lev1_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.009_lev4",
+        "name": "fence-curved.001_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.009_lev4.glb"
+        "path": "/models/toycar/fence-curved.001_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.010_lev4",
+        "name": "fence-curved.002_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.010_lev4.glb"
+        "path": "/models/toycar/fence-curved.002_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.011_lev4",
+        "name": "fence-curved_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.011_lev4.glb"
+        "path": "/models/toycar/fence-curved_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.012_lev4",
+        "name": "fence.001_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.012_lev4.glb"
+        "path": "/models/toycar/fence.001_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.013_lev4",
+        "name": "fence.002_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.013_lev4.glb"
+        "path": "/models/toycar/fence.002_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.014_lev4",
+        "name": "fence.003_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.014_lev4.glb"
+        "path": "/models/toycar/fence.003_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.015_lev4",
+        "name": "fence.004_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.015_lev4.glb"
+        "path": "/models/toycar/fence.004_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.016_lev4",
+        "name": "fence.005_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.016_lev4.glb"
+        "path": "/models/toycar/fence.005_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.017_lev4",
+        "name": "fence.006_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.017_lev4.glb"
+        "path": "/models/toycar/fence.006_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.018_lev4",
+        "name": "fence.007_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.018_lev4.glb"
+        "path": "/models/toycar/fence.007_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.019_lev4",
+        "name": "fence.008_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.019_lev4.glb"
+        "path": "/models/toycar/fence.008_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.020_lev4",
+        "name": "fence.009_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.020_lev4.glb"
+        "path": "/models/toycar/fence.009_lev4.glb"
     },
     {
-        "name": "bigrock4_lev1.021_lev4",
+        "name": "fence_lev4",
         "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.021_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.022_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.022_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.023_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.023_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.024_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.024_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.025_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.025_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.026_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.026_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.027_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.027_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.028_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.028_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1.029_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1.029_lev4.glb"
-    },
-    {
-        "name": "bigrock4_lev1_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/bigrock4_lev1_lev4.glb"
-    },
-    {
-        "name": "building_a.002.001_lev1_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/building_a.002.001_lev1_lev4.glb"
+        "path": "/models/toycar/fence_lev4.glb"
     },
     {
         "name": "low_poly_cuboid_rock_012.001_lev1.001_lev4",
@@ -448,11 +398,6 @@ export const sources = [
         "name": "planks.048_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.048_lev4.glb"
-    },
-    {
-        "name": "planks.049_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.049_lev4.glb"
     },
     {
         "name": "planks.050_lev4",
@@ -900,11 +845,6 @@ export const sources = [
         "path": "/models/toycar/planks.138_lev4.glb"
     },
     {
-        "name": "planks.139_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.139_lev4.glb"
-    },
-    {
         "name": "planks.140_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.140_lev4.glb"
@@ -938,11 +878,6 @@ export const sources = [
         "name": "planks.146_lev4",
         "type": "gltfModel",
         "path": "/models/toycar/planks.146_lev4.glb"
-    },
-    {
-        "name": "planks.147_lev4",
-        "type": "gltfModel",
-        "path": "/models/toycar/planks.147_lev4.glb"
     },
     {
         "name": "planks.148_lev4",

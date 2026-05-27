@@ -90,14 +90,44 @@ export const sources = [
         "path": "/models/toycar/chimney_detailed_lev2.glb"
     },
     {
-        "name": "chimney_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/chimney_lev2.glb"
-    },
-    {
         "name": "cilinder2_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/cilinder2_lev2.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001.001_lev2.glb"
+    },
+    {
+        "name": "coin_structure_detailed.001_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.001_lev2.glb"
+    },
+    {
+        "name": "coin_structure_detailed.002_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.002_lev2.glb"
+    },
+    {
+        "name": "coin_structure_detailed.003_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.003_lev2.glb"
+    },
+    {
+        "name": "coin_structure_detailed.004_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.004_lev2.glb"
+    },
+    {
+        "name": "coin_structure_detailed.005_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.005_lev2.glb"
+    },
+    {
+        "name": "coin_structure_detailed.006_lev2",
+        "type": "gltfModel",
+        "path": "/models/toycar/coin_structure_detailed.006_lev2.glb"
     },
     {
         "name": "coin_structure_detailed_lev2",
@@ -145,16 +175,6 @@ export const sources = [
         "path": "/models/toycar/group_lev2.glb"
     },
     {
-        "name": "hangar_roundb.002_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/hangar_roundb.002_lev2.glb"
-    },
-    {
-        "name": "hangar_roundb_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/hangar_roundb_lev2.glb"
-    },
-    {
         "name": "low_poly_cuboid_rock_006_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/low_poly_cuboid_rock_006_lev2.glb"
@@ -163,16 +183,6 @@ export const sources = [
         "name": "low_poly_cuboid_rock_012_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/low_poly_cuboid_rock_012_lev2.glb"
-    },
-    {
-        "name": "pipe_ringhighend_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/pipe_ringhighend_lev2.glb"
-    },
-    {
-        "name": "pipe_ringhigh_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/pipe_ringhigh_lev2.glb"
     },
     {
         "name": "plane_lev2",
@@ -353,11 +363,6 @@ export const sources = [
         "name": "rock-wide_lev2",
         "type": "gltfModel",
         "path": "/models/toycar/rock-wide_lev2.glb"
-    },
-    {
-        "name": "rocket_basea_lev2",
-        "type": "gltfModel",
-        "path": "/models/toycar/rocket_basea_lev2.glb"
     },
     {
         "name": "rocket_sidesb_lev2",
