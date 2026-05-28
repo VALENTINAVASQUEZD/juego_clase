@@ -141,17 +141,7 @@ Socket.io en `http://localhost:3001`. Eventos: `new-player`, `update-position`, 
 
 ### Despliegue en Vercel (frontend)
 
-1. Sube el repositorio a GitHub.
-2. En [vercel.com](https://vercel.com) → **New Project** → importa el repo.
-3. Configura **Root Directory**: `game-project`.
-4. Agrega variables de entorno en el panel de Vercel:
-   ```
-   VITE_API_URL=https://tu-backend.railway.app
-   VITE_ENEMIES_COUNT=1
-   ```
-5. **Deploy**. Vercel detecta Vite automáticamente (build: `npm run build`, output: `dist`).
-
-> Para el backend usa Railway o Render (soportan Node.js + PostgreSQL). Copia la URL pública en `VITE_API_URL`.
+1. https://juego-blender-m-j.vercel.app/
 
 ---
 
@@ -169,14 +159,6 @@ game-project/
    └─ controls/       # MobileControls
 ```
 
----
-
-### Solución de problemas
-
-- Verifica que PostgreSQL esté corriendo y las variables `PG_*` sean correctas.
-- Si el frontend no carga datos, revisa `VITE_API_URL` en la consola del navegador.
-- CORS: en producción cambia `origin: '*'` al dominio de Vercel.
-- JWT expirado: vuelve a hacer login para obtener un token nuevo.
 
 ---
 

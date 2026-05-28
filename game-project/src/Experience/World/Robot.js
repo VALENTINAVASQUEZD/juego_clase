@@ -54,17 +54,9 @@ export default class Robot {
         this.body.sleep()
         this.body.material = this.physics.robotMaterial
 
-        // Detectar contacto con el suelo para habilitar salto
+        // isOnGround se calcula por raycast en update()
         this.isOnGround = false
         this._jumpCooldown = 0
-        this.body.addEventListener('collide', (e) => {
-            const contact = e.contact
-            // La normal apunta hacia arriba si colisionamos con algo debajo
-            const normalY = contact.ni ? contact.ni.y : 0
-            if (Math.abs(normalY) > 0.5) {
-                this.isOnGround = true
-            }
-        })
 
         this.physics.world.addBody(this.body)
         setTimeout(() => { this.body.wakeUp() }, 100)
@@ -168,17 +160,26 @@ export default class Robot {
 
         const forward = new THREE.Vector3(0, 0, 1).applyQuaternion(this.group.quaternion)
 
-        // isOnGround se activa por evento collide (ver setPhysics), se apaga al saltar
-        // _jumpCooldown evita saltos en bucle
+        // Detectar suelo con raycast hacia abajo (funciona en cualquier nivel)
         if (this._jumpCooldown > 0) {
             this._jumpCooldown -= delta
             this.isOnGround = false
+        } else {
+            const from = this.body.position
+            const to = new CANNON.Vec3(from.x, from.y - 0.7, from.z)
+            const ray = new CANNON.Ray(from, to)
+            ray.skipBackfaces = true
+            ray.collisionFilterMask = -1
+            const result = new CANNON.RaycastResult()
+            this.physics.world.raycastClosest(from, to, { skipBackfaces: true }, result)
+            this.isOnGround = result.hasHit
         }
 
-        if (keys.space && this.isOnGround && !(this._jumpCooldown > 0)) {
+        if (keys.space && this.isOnGround) {
             this.isOnGround = false
-            this._jumpCooldown = 0.5  // medio segundo antes de poder volver a saltar
-            this.body.applyImpulse(new CANNON.Vec3(forward.x * 0.5, 3, forward.z * 0.5))
+            this._jumpCooldown = 0.4
+            this.body.wakeUp()
+            this.body.applyImpulse(new CANNON.Vec3(forward.x * 1.0, 8, forward.z * 1.0))
             this.animation.play('jump')
             return
         }
@@ -277,16 +278,9 @@ export default class Robot {
         this.body.quaternion.setFromEuler(0, 0, 0)
         this.body.wakeUp()
 
-        // Restaurar detección de suelo
+        // isOnGround se calcula por raycast en update()
         this.isOnGround = false
         this._jumpCooldown = 0
-        this.body.addEventListener('collide', (e) => {
-            const contact = e.contact
-            const normalY = contact.ni ? contact.ni.y : 0
-            if (Math.abs(normalY) > 0.5) {
-                this.isOnGround = true
-            }
-        })
 
         // Restaurar visual
         this.group.position.set(spawn.x, spawn.y, spawn.z)
